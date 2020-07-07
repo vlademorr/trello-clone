@@ -65,14 +65,12 @@ const addNewCardActionFailure = (err) => {
   };
 };
 
-export const addNewCardAction = (card) => (dispatch) => {
+export const addNewCardAction = (card, closeModal) => (dispatch) => {
   dispatch(addNewCardActionRequest());
   Axios.post("/cards", { card })
     .then(({ data }) => {
-      batch(() => {
-        dispatch(addNewCardActionSuccess({ data }));
-        // dispatch(toggleModal(false));
-      });
+      dispatch(addNewCardActionSuccess({ data }));
+      closeModal();
     })
     .catch((err) => dispatch(addNewCardActionFailure(err)));
 };
@@ -84,14 +82,12 @@ const updateExistsCardAction = (card) => {
   };
 };
 
-export const updateExistsCard = (card) => (dispatch) => {
+export const updateExistsCard = (card, closeModal) => (dispatch) => {
   dispatch(addNewCardActionRequest());
   Axios.patch("/cards/update", { card })
     .then(({ data }) => {
-      batch(() => {
-        dispatch(updateExistsCardAction({ data }));
-        // dispatch(toggleModal(false));
-      });
+      dispatch(updateExistsCardAction({ data }));
+      closeModal();
     })
     .catch((err) => addNewCardActionFailure(err));
 };

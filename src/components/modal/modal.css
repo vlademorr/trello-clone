@@ -1,5 +1,7 @@
 .close-moda-btn {
   margin-bottom: 3px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .modal-inputs-group-form label,
@@ -51,5 +53,11 @@
 
 .modal-inputs-group-checkbox-wrapp label {
   margin-left: 5px;
+  cursor: pointer;
+}
+
+.close-modal-icon{
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 }

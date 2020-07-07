@@ -45,7 +45,7 @@ const startServer = () => {
 };
 
 mongoose
-  .connect(process.env.MONGO_URI || "mongodb://localhost:27017", {
+  .connect(process.env.MONGO_URI || "mongodb+srv://Vlad:JQIRpvcKc5o8grZs@cluster0.cophq.mongodb.net/test?retryWrites=true&w=majority&ssl=true&authSource=admin", {
     dbName: process.env.DB_NAME || "Trello-clone",
     useNewUrlParser: true,
     useCreateIndex: true,

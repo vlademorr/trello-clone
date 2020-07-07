@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import ReactModal from "react-modal";
+import closeIcon from "./close.svg";
 
 import "./modal.css";
 import {
@@ -80,7 +81,6 @@ const Modal = (props) => {
 
   function hanldeAddNewCard(e) {
     e.preventDefault();
-    console.log(isUpdateModal)
     if (isUpdateModal) {
       return updateExistsCard({
         header,
@@ -88,14 +88,14 @@ const Modal = (props) => {
         description,
         boardId: card.boardId,
         cardId: card._id,
-      });
+      }, hanldeClose);
     }
     addNewCardAction({
       header,
       tags,
       description,
       boardId: card.boardId,
-    });
+    }, hanldeClose);
   }
 
   return (
@@ -105,7 +105,9 @@ const Modal = (props) => {
       onRequestClose={hanldeClose}
     >
       <div onClick={() => hanldeClose()} className="close-moda-btn">
-        close
+        <div>
+          <img src={closeIcon} alt="close" className={"close-modal-icon"}/>
+        </div>
       </div>
       <hr />
       <div className="input-group-wrapp">
