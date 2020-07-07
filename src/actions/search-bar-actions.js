@@ -3,4 +3,4 @@ export function handleChangeAction(e) {
     type: "SEARCH_INPUT_VALUE",
     payload: e.target.value,
   };
-}
+};
