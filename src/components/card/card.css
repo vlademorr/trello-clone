@@ -1,0 +1,33 @@
+.card {
+  padding: 10px 10px 10px 20px;
+  background-color: white;
+  margin-top: 10px;
+  box-shadow: 0 0 5px #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-header-wrapp {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header {
+  flex: 0 0 90%;
+  word-break: break-word;
+}
+
+.card-description {
+  max-width: 95%;
+  margin-top: 10px;
+}
+.card-description p {
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}

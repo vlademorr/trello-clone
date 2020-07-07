@@ -1,0 +1,17 @@
+.card-tag-wrapp {
+  margin-top: 15px;
+}
+
+.card-tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-tag span {
+  padding: 3px;
+  margin-right: 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #ffffff;
+}

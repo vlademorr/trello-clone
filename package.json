@@ -6,14 +6,23 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "mongoose": "^5.9.20",
+    "morgan": "^1.10.0",
+    "normalizr": "^3.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-modal": "^3.11.2",
+    "react-redux": "^7.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "server": "nodemon server/index.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,5 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+   "proxy": "http://localhost:8080"
 }

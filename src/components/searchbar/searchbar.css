@@ -1,0 +1,22 @@
+#menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-search-input-wrapp {
+  padding: 15px;
+  width: max-content;
+}
+
+.text-input {
+  padding: 10px;
+  outline: none;
+  border-radius: 22px;
+  transition: all 0.2s;
+  border: none;
+  box-shadow: 0 0 3px blueviolet;
+}
+
+.text-input:hover {
+  transform: scale(1.02);
+}

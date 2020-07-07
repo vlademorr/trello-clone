@@ -1,0 +1,27 @@
+.drag-container-wrapp {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drag-container {
+  flex: 1;
+  padding: 5px 15px;
+  opacity: 0.9;
+}
+
+#root {
+  height: 100%;
+}
+
+.drag-container-header {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.drag-container-header p {
+  font-size: 18px;
+  text-transform: capitalize;
+}

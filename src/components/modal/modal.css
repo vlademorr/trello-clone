@@ -1,0 +1,55 @@
+.close-moda-btn {
+  margin-bottom: 3px;
+}
+
+.modal-inputs-group-form label,
+.modal-inputs-group-form textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.modal-inputs-group-form textarea {
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+.modal-inputs-group-form label {
+  display: block;
+}
+
+.modal-inputs-group-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-inputs-group-form > * {
+  margin-top: 10px;
+}
+
+.modal-inputs-goroup-send-btn {
+  background: linear-gradient(#648de6, #9198e5);
+  height: 42px;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.modal-inputs-goroup-send-btn:hover {
+  transform: scale(1.01);
+}
+
+.modal-inputs-group-checkbox-wrapp {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.modal-inputs-group-checkbox-wrapp label {
+  margin-left: 5px;
+  cursor: pointer;
+}
