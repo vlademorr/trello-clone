@@ -80,6 +80,7 @@ const Modal = (props) => {
 
   function hanldeAddNewCard(e) {
     e.preventDefault();
+    console.log(isUpdateModal)
     if (isUpdateModal) {
       return updateExistsCard({
         header,

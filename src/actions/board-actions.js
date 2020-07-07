@@ -30,7 +30,7 @@ export const fetchBoards = () => (dispatch) => {
     .catch((err) => dispatch(getBoardActionFailure(err)));
 };
 
-export const onCardDropped = (newBoardId, oldBoardId, cardId) => (dispatch) => {
+export const onCardDropped = (oldBoardId, newBoardId, cardId) => (dispatch) => {
   Axios.patch("/boards/update", {
     newBoardId,
     oldBoardId,
@@ -71,7 +71,7 @@ export const addNewCardAction = (card) => (dispatch) => {
     .then(({ data }) => {
       batch(() => {
         dispatch(addNewCardActionSuccess({ data }));
-        dispatch(toggleModal(false));
+        // dispatch(toggleModal(false));
       });
     })
     .catch((err) => dispatch(addNewCardActionFailure(err)));
@@ -90,7 +90,7 @@ export const updateExistsCard = (card) => (dispatch) => {
     .then(({ data }) => {
       batch(() => {
         dispatch(updateExistsCardAction({ data }));
-        dispatch(toggleModal(false));
+        // dispatch(toggleModal(false));
       });
     })
     .catch((err) => addNewCardActionFailure(err));

@@ -27,12 +27,9 @@ module.exports = () => {
 
     // and update the boardId in card
 
-    const updateBoardIdInCard = CardModel.findOneAndUpdate(
-      { boardId: oldBoardId },
-      {
-        boardId: newBoardId,
-      }
-    ).exec();
+    const updateBoardIdInCard = CardModel.findByIdAndUpdate(cardId, {
+      boardId: newBoardId,
+    }).exec();
 
     Promise.all([updateCurrentBoard, updateNewBoard, updateBoardIdInCard])
       .then(() => res.sendStatus(200))

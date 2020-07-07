@@ -59,7 +59,7 @@ const boardReducer = (state = initialState, action) => {
                 ...board,
                 cards: [
                   ...board.cards.slice(0, cardIndex),
-                  card,
+                  { ...board.cards[cardIndex], ...card },
                   ...board.cards.slice(cardIndex + 1),
                 ],
               },
@@ -124,7 +124,7 @@ const boardReducer = (state = initialState, action) => {
 
       // find the dragged card
       const card = board.cards.find((card) => card._id === cardId);
-
+      card.boardId = newBoardId
       // remove card from current board
       const removedCardFromBoard = {
         ...board,

@@ -22,7 +22,7 @@ const Board = (props) => {
     const cardId = e.dataTransfer.getData("cardId");
     const oldBoardId = e.dataTransfer.getData("boardId");
     if (oldBoardId === boardId) return;
-    onCardDropped(boardId, oldBoardId, cardId);
+    onCardDropped(oldBoardId, boardId, cardId);
   };
   return (
     <div className="drag-container-wrapp">

@@ -31,7 +31,6 @@ module.exports = () => {
   router.patch("/update", (req, res) => {
     const { card } = req.body;
     const { header, tags, description, cardId } = card;
-    console.log(card);
     CardModel.findByIdAndUpdate(
       cardId,
       {
