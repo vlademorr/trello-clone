@@ -14,7 +14,7 @@ const startExpressApp = () => {
   app.use(logger("dev"));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-  app.use(express.static(path.join(__dirname, "./../../build")));
+  app.use(express.static(path.join(__dirname, "../build")));
   app.use(bodyParser.json());
   app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -27,7 +27,7 @@ const startExpressApp = () => {
   });
 
   app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./../../build", "index.html"));
+    res.sendFile(path.join(__dirname, "../build", "index.html"));
   });
 
   routes(app);

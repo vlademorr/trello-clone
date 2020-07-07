@@ -19,10 +19,10 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "server": "nodemon server/index.js",
+    "server": "node server/index.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
